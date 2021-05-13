@@ -64,8 +64,8 @@ def tokenize(text):
     lem_v = [WordNetLemmatizer().lemmatize(word, pos = 'v') for word in lem_n]
 
     # apply stemming to reduce words to their stems
-    stems = [PorterStemmer().stem(word) for word in lem_v]
-    return stems
+#     stems = [PorterStemmer().stem(word) for word in lem_v]
+    return lem_v
 
 def build_pipeline():
     pipeline = Pipeline([
@@ -76,9 +76,18 @@ def build_pipeline():
         
     ])
     
-    return pipeline
+    parameters = {
+    'vect__max_df':[0.75, 1.0],
+    'clf__estimator__n_estimators':[100, 200],
+    'clf__estimator__max_depth': [10, 15]
+    }
+
+    #scorer = make_scorer(multclass_f1_scorer)
+    cv = GridSearchCV(pipeline,param_grid = parameters)
+    return cv
     
 def classification_rep(y_true, y_pred, cat_columns):
+    """Generate classifcation report for our model to help in model evaluation"""
 
     #convert y_true and y_pred from numpy arrays to pandas dataframes
     y_pred = pd.DataFrame(y_pred, columns = cat_columns)
@@ -96,7 +105,7 @@ def save_model(model, model_filepath):
     pickle.dump(model, open(model_filepath, 'wb'))
 
 def main():
-    
+    """Runs script from end to end"""
     if len(sys.argv) == 3:
         database_filepath, model_filepath = sys.argv[1:]
         
