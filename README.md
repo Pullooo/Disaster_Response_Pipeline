@@ -77,18 +77,6 @@ You can use ML Pipeline Preparation Notebook to re-train the model or tune it th
 - readme.md
 
 
-
-
-
-app/templates/*: templates/html files for web app
-
-data/process_data.py: Extract Train Load (ETL) pipeline used for data cleaning, feature extraction, and storing data in a SQLite database
-
-models/train_classifier.py: A machine learning pipeline that loads data, trains a model, and saves the trained model as a .pkl file for later use
-
-run.py: This file can be used to launch the Flask web app used to classify disaster messages
-
-
 #### Author
 Paul Fru
 
