@@ -1,7 +1,7 @@
 # Disaster-Response-Pipelines
 
 ### Description
-This Project is part of the Data Science Nanodegree Program by Udacity in collaboration with Figure Eight. The dataset contains pre-labelled tweet and messages from real-life disaster events. The goal of the project is is to build a Natural Language Processing (NLP) model to categorize messages on a real time basis.
+This Project is part of the Data Science Nanodegree Program by Udacity in collaboration with Figure Eight. The dataset contains pre-labelled tweet and messages from real-life disaster events. The goal of the project is is to build a Natural Language Processing (NLP) model to categorize messages on a real time basis. This is important because following a disaster, loads of messages are received which pose a challenge for disaster response companies to manually read through and pull out the most important messages. Building a model that categorises messages will help speed up resource allocation. For example, the team that deals with water supplies will respond to messages about this, and teams that deal with medical supplies will be able to attend directly to those who need medical supplies. Moreover, since there are many false positive messages, this model will help speed up things by classify messages so that no time is spent reading the unimportant messages.
 
 This project is divided in the following key sections:
 
@@ -45,6 +45,41 @@ You can use ML Pipeline Preparation Notebook to re-train the model or tune it th
 
 
 #### Important Files
+
+- data
+
+  |-categories.csv #data to process
+ 
+  |-DisasterResponse.db #database to save clean data
+  
+  |-ETL Pipeline Preparation.ipynb #jupyter notebook file development code and output
+  
+  |-messages.csv #data to process
+  
+  |-process_data.py # python code that cleans and saves data
+- app
+
+  |-templates
+  
+      | |-go.html #classification result page of web app
+
+      | |-master.html #main page of web app
+
+  |-run.py #Flask file that runs app
+  
+- models
+
+  |-ML Pipeline Preparation.ipynb #jupyter notebook script containing model development code
+  
+  |-pickle_model.pkl #saved model
+  
+  |-train_classifier.py #development script to train model
+- readme.md
+
+
+
+
+
 app/templates/*: templates/html files for web app
 
 data/process_data.py: Extract Train Load (ETL) pipeline used for data cleaning, feature extraction, and storing data in a SQLite database
