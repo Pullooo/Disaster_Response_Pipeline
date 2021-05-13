@@ -68,6 +68,7 @@ def tokenize(text):
     return lem_v
 
 def build_pipeline():
+    """Pipeline to tune hyper parameters and build model"""
     pipeline = Pipeline([
         
         ('vect', CountVectorizer(tokenizer = tokenize)),
