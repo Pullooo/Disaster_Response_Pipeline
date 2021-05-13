@@ -54,6 +54,6 @@ models/train_classifier.py: A machine learning pipeline that loads data, trains 
 run.py: This file can be used to launch the Flask web app used to classify disaster messages
 
 
-#### Authors
+#### Author
 Paul Fru
 
