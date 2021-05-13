@@ -33,10 +33,10 @@ To run ETL pipeline to clean data and store the processed data in the database p
 To run the ML pipeline that loads data from DB, trains classifier and saves the classifier as a pickle file python models/train_classifier.py data/disaster_response_db.db models/classifier.pkl
 Run the following command in the app's directory to run your web app. python run.py
 
-To see the live, copy and paste this in your web browser http://0.0.0.0:3001/
+To see this live, copy and paste this in your web browser http://0.0.0.0:3001/
 
 
-Additional Material
+#### Additional Material
 In the data and models folder you can find two jupyter notebook that will help you understand how the model works step by step:
 
 ETL Preparation Notebook: learn everything about the implemented ETL pipeline
@@ -44,7 +44,7 @@ ML Pipeline Preparation Notebook: look at the Machine Learning Pipeline develope
 You can use ML Pipeline Preparation Notebook to re-train the model or tune it through a dedicated Grid Search section.
 
 
-Important Files
+#### Important Files
 app/templates/*: templates/html files for web app
 
 data/process_data.py: Extract Train Load (ETL) pipeline used for data cleaning, feature extraction, and storing data in a SQLite database
@@ -54,6 +54,6 @@ models/train_classifier.py: A machine learning pipeline that loads data, trains 
 run.py: This file can be used to launch the Flask web app used to classify disaster messages
 
 
-Authors
+#### Authors
 Paul Fru
 
