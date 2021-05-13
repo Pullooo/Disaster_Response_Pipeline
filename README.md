@@ -24,7 +24,7 @@ Web App and Data Visualization: Flask, Plotly
 ### Installing
 To clone the git repository:
 
-git clone https://github.com/canaveensetia/udacity-disaster-response-pipeline.git
+git clone https://github.com/Pullooo/Disaster_Response_Pipeline.git
 
 ### Executing Program:
 You can run the following commands in the project's directory to set up the database, train model and save the model.
